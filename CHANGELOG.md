@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.1] - unreleased
+## [3.3.1] - Unreleased
 
 ### Added
 
@@ -12,14 +12,53 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## [3.3.0] - 2019-07-12
 
-## [3.1.0] - 2018-12-03
+### Added
+- New blocks:
+  - `widget/footer/services.tpl`
+    - footer_services_cart
+  - `form/fieldset/user_shipping.tpl`  
+    - form_user_shipping_address_actions
+    - form_user_shipping_address_edit_action
+    - form_user_shipping_address_delete_action
+- Add stoken parameter to remove voucher link
+
+### Fixed
+- Fix "sBackgroundPosVertical" config variable constraints [Wave PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
+- Do not use deprecated getSession of Base class
+- Fix HTML syntax error in oxaddress__oxfname req [Wave PR-41](https://github.com/OXID-eSales/wave-theme/pull/41)
+- Fix wrong icon in offline page [WAVE PR-38](https://github.com/OXID-eSales/wave-theme/pull/38)
+
+## [3.2.0] - 2019-04-11
+
+### Added
+- New blocks:
+  - `page/search/search.tpl`
+    - search_bottom_listlocator [PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
+  - `page/checkout/inc/basketcontents.tpl`
+    - checkout_basketcontents_summary_table_inner [PR-148](https://github.com/OXID-eSales/flow_theme/pull/148)
+
+### Fixed
+- Several CSS improvements:
+  - Remove the unsupported font-smooth property [PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
+  - Remove empty CSS rules [PR-145](https://github.com/OXID-eSales/flow_theme/pull/145)
+  - Merge duplicate CSS selector [PR-146](https://github.com/OXID-eSales/flow_theme/pull/146)
+- [0006958](https://bugs.oxid-esales.com/view.php?id=6958) Remove unnecessary closing "strong" tags [PR-147](https://github.com/OXID-eSales/flow_theme/pull/147)
+  
+### Changed
+- Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
+- Wrap product count in minibasket in "badge" div [PR-138](https://github.com/OXID-eSales/flow_theme/pull/138)
+
+## [3.1.0] - 2019-01-18
 
 ### Added
 - Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
 - Add active class to cms content pages in submenus [PR-133](https://github.com/OXID-eSales/flow_theme/pull/133)
 - Introduce new feature - reset category filter [0002046](https://bugs.oxid-esales.com/view.php?id=2046)
 - New blocks:
+  - `email/html/header.tpl`
+    - email_html_header [PR-140](https://github.com/OXID-eSales/flow_theme/pull/140)
   - `page/checkout/inc/basketcontents_table.tpl`
     - checkout_basketcontents_basketitem_title [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
     - checkout_basketcontents_basketitem_artnum [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
@@ -43,10 +82,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - Border bottom was changes to customizable HR tag
   - Allow textarea to be resized only vertically
 - Fix errors in translations [PR-132](https://github.com/OXID-eSales/flow_theme/pull/132) [0006909](https://bugs.oxid-esales.com/view.php?id=6909)
+- Fix the Icon on the account dashboard button [PR-139](https://github.com/OXID-eSales/flow_theme/pull/139)
 
 ### Changed
 - Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
-- In category page, use getTitle from model and not from controller [PR-98](https://github.com/OXID-eSales/flow_theme/pull/98)
 - Specify "container" for tooltip plugin [PR-130](https://github.com/OXID-eSales/flow_theme/pull/130)
 - Use oxprice for formatting the currency in basket and details page [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
 - PHP 7.2 support: count(): Parameter must be an array or an object that implements Countable
@@ -159,7 +198,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.1.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...HEAD
+[3.3.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.3.0...HEAD
+[3.3.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.2.0...v3.3.0
+[3.2.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...v3.2.0
 [3.1.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...v3.1.0
 [3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...v3.0.1
